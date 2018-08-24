@@ -4,23 +4,29 @@ Utility for signing arbitrary messages with NEP2 Keypairs or WIF
 * Compatible with Python 3.5+
 * https://pypi.python.org/pypi/neosign
 
-``neosign`` examples:
+
+
+
+nep2 usage
+----------
 
 .. code-block:: console
 
-    $ neosign -h
-    usage: np-sign [-h] [-n] [--wif WIF] message
+    $ neosign abcabc -n
+    [nep2 key]> ********************
+    [nep2 key password]> ****************
+    Signing With Address AWeZnH735EavQJKbJPC5F8fxutBnJFhukW
+    pubkey, sig: 02029e81b26c573fd19af392fbb0187a0faf01e1a6ab54141699a1e19cf74738c3 1fbcbcc1dbd44af6dea843b84b10cb461925279c8b76cc389932c2463892aec1662fc940bbedc9a479cc6197acaddb3044c19242ee68629ce4199156a9a88fb2
 
-    A utility for signing messages. Example usage: "neosign myhexmessage -w MYWIF"
 
-    positional arguments:
-      message               The message in string format to be signed
+wif usage
+---------
 
-    optional arguments:
-      -h, --help            show this help message and exit
-      -n, --nep2            Whether to use an NEP2 passhrase
-      -w, --wif             If using a wif pass in the wif
+.. code-block:: console
 
+    $ neosign abcabc -w L447RbcX5FospWVCT9XkAZze2GG4xhgBhuZgtBrAJvTk5ZgeYcyB
+    Signing With Address AWeZnH735EavQJKbJPC5F8fxutBnJFhukW
+    pubkey, sig: 02029e81b26c573fd19af392fbb0187a0faf01e1a6ab54141699a1e19cf74738c3 1fbcbcc1dbd44af6dea843b84b10cb461925279c8b76cc389932c2463892aec1662fc940bbedc9a479cc6197acaddb3044c19242ee68629ce4199156a9a88fb2
 
 
 Getting started

@@ -7,7 +7,7 @@ from neocore.Cryptography.Crypto import Crypto
 
 def main():
     parser = argparse.ArgumentParser(description='A utility for signing messages.  Example usage: "like "neosign mymessage -n"')
-    parser.add_argument('message', type=str, help='The message in string format to be signed')
+    parser.add_argument('message', type=str, help='The message in hex string format to be signed')
     parser.add_argument('-n', '--nep2', action='store_true', help="Whether to use an NEP2 passhrase rather than a wallet")
     parser.add_argument('-w', '--wif', type=str, default=None, help='If using a wif pass in the wif')
     args = parser.parse_args()
@@ -39,6 +39,8 @@ def main():
             signature = signature.hex()
             print("pubkey, sig: %s %s " % (pubkey, signature))
 
+        else:
+            raise Exception("Please Specify -n or -w")
     except Exception as e:
         print("Could not sign: %s " % e)
 
