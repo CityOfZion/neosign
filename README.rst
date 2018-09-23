@@ -29,6 +29,15 @@ wif usage
     pubkey, sig: 02029e81b26c573fd19af392fbb0187a0faf01e1a6ab54141699a1e19cf74738c3 1fbcbcc1dbd44af6dea843b84b10cb461925279c8b76cc389932c2463892aec1662fc940bbedc9a479cc6197acaddb3044c19242ee68629ce4199156a9a88fb2
 
 
+pass input file
+---------------
+
+.. code-block:: console
+    $ neosign --input myfile.txt -w L447RbcX5FospWVCT9XkAZze2GG4xhgBhuZgtBrAJvTk5ZgeYcyB
+    Signing With Address AWeZnH735EavQJKbJPC5F8fxutBnJFhukW
+    pubkey, sig: 02029e81b26c573fd19af392fbb0187a0faf01e1a6ab54141699a1e19cf74738c3 1fbcbcc1dbd44af6dea843b84b10cb461925279c8b76cc389932c2463892aec1662fc940bbedc9a479cc6197acaddb3044c19242ee68629ce4199156a9a88fb2
+
+
 Getting started
 ---------------
 
